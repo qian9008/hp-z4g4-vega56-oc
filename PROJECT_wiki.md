@@ -217,3 +217,17 @@ GfxOff 无法重新触发。这是 macOS AMD 驱动的 bug——UVD 退出后 DP
 2. ⏳ 退出视频播放后 MCLK ≤ 500MHz（不再卡 800MHz）— 待重启验证
 3. 命令行查看频率: `ioreg -l -c IOService -r -d 6 | grep "Memory Clock"`
 
+### 8. 不兼容 NVMe (海力士 PC601) 的屏蔽 (2026-07-25 修复)
+
+**背景**: 系统中插有海力士 PC601 NVMe 硬盘，其固件与 macOS `IONVMeController` 原生驱动不兼容，导致加载时内核崩溃或启动自检时严重卡顿。
+
+**发现的错误**: 
+- 之前 `DeviceProperties` 注入的 `PciRoot` 路径不准确（照搬了网上的 `PciRoot(0x2C)`）。
+- 同时启用了互相冲突的 ACPI 补丁：`SSDT-PC03-BR3C-NVME.aml` (用于补全节点) 和 `SSDT-NVMe-disable.aml` (暴力关闭整个 `BR3C` 桥，导致 ACPI 冲突和启动卡顿)。
+- 查阅 IOReg 后确认，真实的设备路径为 `IOService:/AppleACPIPlatformExpert/PC03@0/AppleACPIPCI/pci-bridge@2/IOPP/pci1c5c,1627@0`，其对应的 EFI 路径实为 **`PciRoot(0x3)/Pci(0x2,0x0)/Pci(0x0,0x0)`**。
+
+**最终屏蔽方案**:
+1. **DeviceProperties 注入 (config.plist)**: 在正确的路径 `PciRoot(0x3)/Pci(0x2,0x0)/Pci(0x0,0x0)` 下，注入 `class-code = FFFFFFFF`（Base64: `/////w==`），强制 macOS 将其识别为未分配类别的未知设备，从而跳过驱动加载。
+2. **ACPI (SSDT) 配合**: 
+   - **保留** `SSDT-PC03-BR3C-NVME.aml`（此补丁在 `_SB.PC03.BR3C` 下定义了 `ANS1` 节点，为上面的属性注入提供了挂载点）。
+   - **彻底禁用/删除** 任何试图通过 `_STA=0` 直接隐藏设备的补丁（如 `SSDT-NVMe-disable.aml` 或带有 `CORRECT` 字样的补丁），以避免与节点补全补丁发生抢占冲突，同时防止 macOS 强行物理扫描总线带来的识别崩溃。
