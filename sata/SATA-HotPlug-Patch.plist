@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kernel</key>
+	<dict>
+		<key>Patch</key>
+		<array>
+			<!-- ============================================================ -->
+			<!-- Patch 1: AppleAHCI 强制 AHCI-Ejectable=1                    -->
+			<!-- 原理: NOP 掉条件跳转 je, 让 mov byte [rbx+0xb4],1 总是执行  -->
+			<!-- 适用: AppleAHCI 类 (用户的 SAT1 控制器走这个路径)            -->
+			<!-- ============================================================ -->
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>Comment</key>
+				<string>Force AHCI-Ejectable=1 (AppleAHCI)</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>dAfGg7QAAAAB</data>
+				<key>Identifier</key>
+				<string>com.apple.driver.AppleAHCIPort</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>Replace</key>
+				<data>kJDGg7QAAAAB</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
+			<!-- ============================================================ -->
+			<!-- Patch 2: AppleIntelPchSeriesAHCI 强制 AHCI-Ejectable=1       -->
+			<!-- 原理: and edx,1 → or edx,1, 让端口能力 bit14 强制为 1       -->
+			<!-- 适用: AppleIntelPchSeriesAHCI 类 (Intel PCH 系列芯片组)     -->
+			<!-- ============================================================ -->
+			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>Comment</key>
+				<string>Force AHCI-Ejectable=1 (IntelPchSeriesAHCI)</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>weoOg+IB</data>
+				<key>Identifier</key>
+				<string>com.apple.driver.AppleAHCIPort</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>Replace</key>
+				<data>weoOg8oB</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>

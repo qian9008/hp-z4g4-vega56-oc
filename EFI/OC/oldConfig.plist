@@ -58,17 +58,17 @@
                 </dict>
                 <dict>
                     <key>Comment</key>
-                    <string></string>
+                    <string>Disable SK Hynix PC601 NVMe on PC03.BR3C</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
-                    <string>SSDT-PC03-BR3D-NVME.aml</string>
+                    <string>SSDT-NVME-DISABLE-CORRECT.aml</string>
                 </dict>
                 <dict>
                     <key>Comment</key>
                     <string></string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
                     <string>SSDT-NVMe-disable.aml</string>
                 </dict>
@@ -151,6 +151,11 @@
         <dict>
             <key>Add</key>
             <dict>
+                <key>#@PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
+                <dict>
+                    <key>PP_PhmSoftPowerPlayTable</key>
+                    <data>pwIIAQBcAO8GAAAOLAAAGwBIAAAAgKkDAPBJAgDO/wgAAAAAAAAAAAAAAAAAAAIBXABAAjcClACPAbQAHgF6AIwArQEAAAAAYwIAAJAAmQJeATQBiAFoNgIAcQICAgAAAAAAAAgAAAAAAAAABQAHAAMABQAAAAAAAAABCCADIAMgAyADIAMgAyADIAMBAeIEAQGEAwAGYOoAAABAGQEAAdxKAQACAHcBAAOQkQEABWywAQAHAQjQTAEAAACAAAAAAAAAoCAGAAAAAQABgADgAQAAAgGAAAIAQAAAgGAAAAIAQAAAgGAAAAMAYAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAA0EwBAAAAgAAAAAAAANBMAQAAAIAAAAAAAADQTAEAAACAAAAAAAAA0EwBAAAAgAAAAAAAAAAEYOoAAABAGQEAANxKAQAAkF8BAAAACChuAAAALMkAAAH4CwEAAoA4AQADkF8BAAT0kQEABdCwAQAGwNQBAAcACGw5AAAAJF4AAAH8hQAAAqy8AAADNNAAAARobgEABQiXAQAG7KMBAAcAAWg8AQAAAQQ8QQAAAAAAUMMAAAAAAHARAQABAABQwwAAAAAAAQgAmIUAAEC1AABg6gAAUMMAAAGAuwAAYOoAAJQLAQBQwwAAAnj/AABAGQEAtCcBAFDDAAADtCcBANxKAQDcSgEAUMMAAASAOAEAkF8BANxKAQBQwwAABdxKAQAAdwEAkF8BAFDDAAAGAHcBAAB3AQCQXwEAUMMAAAcAdwEAkJEBAAB3AQBQwwAAARgAAAAAAAAAC+QSYAlgCUsACgBUA5ABkAGQAZABkAGQAZABAAAAAAACBDEHpQClAKUALAEAAFkAaQBKAEoAXwBzAHMAZABAAJCSl2CWAJBVAAAAAAAAAAAAAAAAAAAAAAACAtQwAAACEGDqAAACEA==</data>
+                </dict>
                 <key>PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
                 <dict>
                     <key>@0,name</key>
@@ -230,7 +235,7 @@
                     <key>CFG_USE_TCON</key>
                     <integer>1</integer>
                     <key>PP_PhmSoftPowerPlayTable</key>
-                    <data>qgoAAAAKAAoAAKoADAAKAAAAAAAAqgwACgYA0gyqBgDaCgCqDKqqqtoKAAAADAAADACqAAAAAACqDKqqAKqqAAwKDKoAAAYADAAKAAoAAAAKAKoNDAQKAAoAAAAMAAAAAAAGAAAAAKoADAAAAAoAAAAA2gDGAAAAqgwKAAwAqgAAAAYADAIAqgAABgAMAAAAAAwAqgAKBgAMCgAACgDaAAoAAAAAAAAACgAKAAoAqgAMCgwKAACqAAyqAACqDAAADAAADQAAqqoAAAwKqgyqDKoKqgAKANoADQAKAAAAAAQMAAaqAKoGqgwADAzGADoNAAw6AAwAAAAKAAoACgBmAAwAAAAAAAAAqqqqAAAAqgCqCgAAAAANAAyqBooMAKoKDKoAAKoAxgAAAAAAAAAAAAAA2gAGCg==</data>
+                    <data>pwIIAQBcAO8GAAAOLAAAGwBIAAAAgKkDAPBJAgDO/wgAAAAAAAAAAAAAAAAAAAIBXABAAjcClACPAbQAHgF6AIwArQEAAAAAYwIAAJAAmQJeATQBiAFoNgIAcQICAgAAAAAAAAgAAAAAAAAABQAHAAMABQAAAAAAAAABCCADIAMgAyADIAMgAyADIAMBAeIEAQGEAwAGYOoAAABAGQEAAdxKAQACAHcBAAOQkQEABWywAQAHAQjQTAEAAACAAAAAAAAAoCAGAAAAAQABgADgAQAAAgGAAAIAQAAAgGAAAAIAQAAAgGAAAAMAYAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAAgGAAAAMAQAAA0EwBAAAAgAAAAAAAANBMAQAAAIAAAAAAAADQTAEAAACAAAAAAAAA0EwBAAAAgAAAAAAAAAAEYOoAAABAGQEAANxKAQAAkF8BAAAACChuAAAALMkAAAH4CwEAAoA4AQADkF8BAAT0kQEABdCwAQAGwNQBAAcACGw5AAAAJF4AAAH8hQAAAqy8AAADNNAAAARobgEABQiXAQAG7KMBAAcAAWg8AQAAAQQ8QQAAAAAAUMMAAAAAAHARAQABAABQwwAAAAAAAQgAmIUAAEC1AABg6gAAUMMAAAGAuwAAYOoAAJQLAQBQwwAAAnj/AABAGQEAtCcBAFDDAAADtCcBANxKAQDcSgEAUMMAAASAOAEAkF8BANxKAQBQwwAABdxKAQAAdwEAkF8BAFDDAAAGAHcBAAB3AQCQXwEAUMMAAAcAdwEAkJEBAAB3AQBQwwAAARgAAAAAAAAAC+QSYAlgCUsACgBUA5ABkAGQAZABkAGQAZABAAAAAAACBDEHpQClAKUALAEAAFkAaQBKAEoAXwBzAHMAZABAAJCSl2CWAJBVAAAAAAAAAAAAAAAAAAAAAAACAtQwAAACEGDqAAACEA==</data>
                     <key>device_type</key>
                     <string>ATY,KamarangParent</string>
                     <key>hda-gfx</key>
@@ -238,7 +243,7 @@
                     <key>model</key>
                     <string>AMD Radeon Pro Vega 56</string>
                 </dict>
-                <key>PciRoot(0x2C)/Pci(0x2,0x0)/Pci(0x0,0x0)</key>
+                <key>PciRoot(0x3)/Pci(0x2,0x0)/Pci(0x0,0x0)</key>
                 <dict>
                     <key>class-code</key>
                     <data>/////w==</data>
@@ -275,6 +280,114 @@
                 </dict>
                 <dict>
                     <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>SATA-unsupported.kext</string>
+                    <key>Comment</key>
+                    <string>V0.9.2</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string></string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>CtlnaAHCIPort.kext</string>
+                    <key>Comment</key>
+                    <string>V341.0.2</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/CtlnaAHCIPort</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>HynixDisable.kext</string>
+                    <key>Comment</key>
+                    <string>V1.0</string>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>ExecutablePath</key>
+                    <string></string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>DisableTurboBoost.64bits.kext</string>
+                    <key>Comment</key>
+                    <string>V0.0.1</string>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/DisableTurboBoost</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>CPUFriend.kext</string>
+                    <key>Comment</key>
+                    <string>V1.3.0 | CPU power management</string>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/CPUFriend</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>CPUFriendDataProvider.kext</string>
+                    <key>Comment</key>
+                    <string>V1.0.1 | CPU power management data</string>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>ExecutablePath</key>
+                    <string></string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
                     <string>x86_64</string>
                     <key>BundlePath</key>
                     <string>VirtualSMC.kext</string>
@@ -302,6 +415,42 @@
                     <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/WhateverGreen</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>Any</string>
+                    <key>BundlePath</key>
+                    <string>AMD10000Controller.kext</string>
+                    <key>Comment</key>
+                    <string>V7.0.0 | 修改 ATY,Kamarang aty_properties: PP_DisableULV=0, PP_GfxOffControl=1</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string></string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>AGPMInjector.kext</string>
+                    <key>Comment</key>
+                    <string>V137 | 注入 AGPM personality，让 AGPMController 识别 Vega 56 (0x687f)</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string></string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
@@ -549,7 +698,7 @@
                     <key>BundlePath</key>
                     <string>USBInjectAll.kext</string>
                     <key>Comment</key>
-                    <string></string>
+                    <string>V0.8.0</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -587,7 +736,7 @@
                     <key>Comment</key>
                     <string>V1.4.1</string>
                     <key>Enabled</key>
-                    <false/>
+                    <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/AMFIPass</string>
                     <key>MaxKernel</key>
@@ -675,7 +824,7 @@
                     <key>BundlePath</key>
                     <string>RadeonBoost.1.6.kext</string>
                     <key>Comment</key>
-                    <string>V</string>
+                    <string>V1.0</string>
                     <key>Enabled</key>
                     <false/>
                     <key>ExecutablePath</key>
@@ -687,44 +836,26 @@
                     <key>PlistPath</key>
                     <string>Contents/Info.plist</string>
                 </dict>
+            </array>
+            <key>Block</key>
+            <array>
                 <dict>
                     <key>Arch</key>
                     <string>x86_64</string>
-                    <key>BundlePath</key>
-                    <string>AppleGraphicsPowerManagement.kext</string>
                     <key>Comment</key>
-				<string>新增 Vendor1002Device687f 让 AGPM 匹配 Vega 56</string>
-				<key>Enabled</key>
-				<true/>
-                    <key>ExecutablePath</key>
-                    <string></string>
+                    <string>Block 系统 AGPM，用自定义版本（含 Vega 56 支持）</string>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>Identifier</key>
+                    <string>com.apple.driver.AGPM</string>
                     <key>MaxKernel</key>
                     <string></string>
                     <key>MinKernel</key>
                     <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
+                    <key>Strategy</key>
+                    <string>Exclude</string>
                 </dict>
             </array>
-		<key>Block</key>
-		<array>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Comment</key>
-				<string>Block 系统 AGPM，用自定义版本（含 Vega 56 支持）</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Identifier</key>
-				<string>com.apple.driver.AGPM</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>Strategy</key>
-				<string>Exclude</string>
-			</dict>
-		</array>
             <key>Emulate</key>
             <dict>
                 <key>Cpuid1Data</key>
@@ -885,7 +1016,7 @@
                 <key>LauncherPath</key>
                 <string>Default</string>
                 <key>PickerAttributes</key>
-                <integer>17</integer>
+                <integer>49</integer>
                 <key>PickerAudioAssist</key>
                 <false/>
                 <key>PickerMode</key>
@@ -899,7 +1030,7 @@
                 <key>TakeoffDelay</key>
                 <integer>0</integer>
                 <key>Timeout</key>
-                <integer>5</integer>
+                <integer>0</integer>
             </dict>
             <key>Debug</key>
             <dict>

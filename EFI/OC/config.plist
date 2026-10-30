@@ -151,7 +151,7 @@
 	<dict>
 		<key>Add</key>
 		<dict>
-			<key>##PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x0)-2</key>
+			<key>PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>@0,name</key>
 				<string>ATY,Kamarang</string>
@@ -230,28 +230,7 @@
 				<key>CFG_USE_TCON</key>
 				<integer>1</integer>
 				<key>PP_PhmSoftPowerPlayTable</key>
-				<data>a7020801005c00ef0600000e2c00001b004800000080a90300f0490200320008000000000000000000000000000002015c004002370294008f01b4001e017a008c00ad010000000063020000900099025e01340188016836020071020202000000000000080000000000000005000700030005000000000000000108ee02ee02ee02ee02ee02ee02ee02ee020101e20401018403000660ea0000004019010001dc4a010002007701000390910100056cb00100070108d04c0100000080000000000000d04c0100010000000000000000d04c0100020000000000000000d04c0100030000000000000000d04c0100040000000000000000d04c0100050000000001000000d04c0100060000000001000000d04c0100070000000001000000000460ea0000004019010000dc4a010000905f0100000008286e0000002cc9000001f80b0100028038010003905f010004f491010005d0b0010006c0d401000700086c39000000245e000001fc85000002acbc00000334d0000004686e0100050897010006eca30100070001683c01000001043c41000000000050c300000000007011010001000050c300000000000108009885000040b5000060ea000050c300000180bb000060ea0000940b010050c300000278ff000040190100b427010050c3000003b4270100dc4a0100dc4a010050c300000480380100905f0100dc4a010050c3000005dc4a010000770100905f010050c30000060077010000770100905f010050c300000700770100909101000077010050c300000118000000000000000be412600960094b000a0054039001900190019001900190019001000000000002043107a500a500a5002c010000590069004a004a005f007300730064004000909297609600905500000000000000000000000000000000000202d4300000021060ea0000021w==</data>
-				<key>device_type</key>
-				<string>ATY,KamarangParent</string>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
-				<key>model</key>
-				<string>AMD Radeon Pro Vega 56</string>
-			</dict>
-			<key>PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>#1</key>
-				<string>A7020801005C00EF0600000E2C00001B004800000080A90300F0490200320008000000000000000000000000000002015C004002370294008F01B4001E017A008C00AD010000000063020000900099025E0134018801683602007102020200000000000008000000000000000500070003000500000000000000010820038403B603E8031A044C047E04B0040101E20401018403000660EA0000004019010001DC4A010002007701000390910100056CB00100070108D04C01000000800000000000001C83010001000000000000000088BC0100020000000000000000B4EF010003000000000000000080000200040000000000000000C83F0200050000000001000000C8580200060000000001000000186D0200070000000001000000000460EA0000004019010000DC4A010000905F0100000008286E0000002CC9000001F80B0100028038010003905F010004F491010005D0B0010006C0D401000700086C39000000245E000001FC85000002ACBC00000334D0000004686E0100050897010006ECA30100070001683C01000001043C41000000000050C300000000007011010001000050C300000200000108009885000040B5000060EA000050C300000180BB000060EA0000940B010050C300000278FF000040190100B427010050C3000003B4270100DC4A0100DC4A010050C300000480380100905F0100DC4A010050C3000005DC4A010000770100905F010050C30000060077010000770100905F010050C300000700770100909101000077010050C300000118000000000000000BE412600960094B000A0054039001900190019001900190019001000000000002043107A500A500A5002C010000590069004A004A005F007300730064004000909297609600905500000000000000000000000000000000000202D4300000021060EA0000021000140002010200080080000002000400084000FFFF880001048806040013314800212100006C000000080000001332510021220000730000008000000013335A001E2100007A000000000200000C3163001E22000081000000000400000104900002040100FF0104910002040200FF0104940002040500FF0104950002040600FF14060F000000FF14060F000000FF14060F000000FF14060F000000FF2000030192E6C50000700300901F0000000000000000B80B000660008C0A00000500010100002703020343004F000000930200000000000000000100000400200000FFFF00000000000000000000000000002B00006010073500010200004B4841383433383031420000000000FFFFFF0000000000160000008140010082400100834001008440010085400100864001008740010088400100894001008A4001008C4001008D4001008E4001008F40010090400100914001009440010095400100964001009740010098400100A14001003C4100000A0603030909030302020005080000000303050004000000000200000302010303020103010D00008C020000080C00002E000000000011000400000055140D011B0007000400020509010C01000002002C00000044040000307500000B0A05030F0F050502020005080000000303050006000000000300000302010303020103010E000092040000080C000051000000000011000400000055140E0130000700040002050A010C01000002004E0000004404000050C300000C1108051818070702030005080000000403050009000000000400000302010303020103010E00009E070000080C00008700000000001100040000005514110150000700040002050B020C0100000200820000004404000080380100111B0D0827270C0C040500050D000000060307000D00000000070000030201030302010301110000300C0000080C0000D8000000000011000600000086201801800007000600020610040C0100000200D000000044040000A08601001421100A2F2F0E0E04060005100000000704090010000000000800000302010303020103011300003C0F0000080F00000E0100000000110008000000A8281C01A00007000800020813050C010000020004010000440400000000000000000000FFFFFF00FFFFFF01FFFFFF02FFFFFF0300000000110000004F5C0100505C0100515C0100525C0100535C0100545C0100555C0100565C0100575C01000000000101000001020000010300000104000001050000010600000107000001FFFFFF005C1AAB6104800000000000002001000000000000000000000000000000000000000000000036010000000007CCF9CCCCA800AA55000000000000000002020202000010000000000000D2000402B004000020030000FB00000035040000620000001B0000000000B335FDFF33B901001D5A02001E43FDFF777401008628020000000000DD000000CCFFFFFF000000009F000000DCFFFFFFC012000100010001000000000000AC090000490A000000000000AC090000490A0000000000009A01000000000000000000009A0100000000000000000000000000000000000000000000000000002500000001010000000006090000560D00000000000006090000560D0000000000009A01000000000000000000009A01000000000000460104010103AA000806600000000000270028003F00630040009E0041006B00420038006B00010061002000760089007700C6002800FF004900D000370014009400530092000A009300C3009500220043009E004400590045002E00460038006C0001006200A000780060007900F300290040004A00DE0038001E004800FC0047000700E800030051006700E80007009900FC004B0040004C0044005E00</string>
-				<key>@0,name</key>
-				<string>ATY,Kamarang</string>
-				<key>@1,name</key>
-				<string>ATY,Kamarang</string>
-				<key>@2,name</key>
-				<string>ATY,Kamarang</string>
-				<key>@3,name</key>
-				<string>ATY,Kamarang</string>
-				<key>PP_PhmSoftPowerPlayTable</key>
-				<data>pwIIAQBcAO8GAAAOLAAAGwBIAAAAgKkDAPBJAgAyAAgAAAAAAAAAAAAAAAAAAAIBXABAAjcClACPAbQAHgF6AIwArQEAAAAAYwIAAJAAmQJeATQBiAFoNgIAcQICAgAAAAAAAAgAAAAAAAAABQAHAAMABQAAAAAAAAABCCADPgNmA2YDZgNmA2YDZgMBAeIEAQGEAwAGYOoAAABAGQEAAdxKAQACAHcBAAOQkQEABWywAQAHAQjQTAEAAACAAAAAAAAAHIMBAAEAAAAAAAAAAIi8AQACAAAAAAAAAACIvAEAAwAAAAAAAAAAiLwBAAQAAAAAAAAAAIi8AQAFAAAAAAEAAACIvAEABgAAAAABAAAAiLwBAAcAAAAAAQAAAAAEYOoAAABAGQEAANxKAQAAkF8BAAAACChuAAAALMkAAAH4CwEAAoA4AQADkF8BAAT0kQEABdCwAQAGwNQBAAcACGw5AAAAJF4AAAH8hQAAAqy8AAADNNAAAARobgEABQiXAQAG7KMBAAcAAWg8AQAAAQQ8QQAAAAAAUMMAAAAAAHARAQABAABQwwAAAAAAAQgAmIUAAEC1AABg6gAAUMMAAAGAuwAAYOoAAJQLAQBQwwAAAnj/AABAGQEAtCcBAFDDAAADtCcBANxKAQDcSgEAUMMAAASAOAEAkF8BANxKAQBQwwAABdxKAQAAdwEAkF8BAFDDAAAGAHcBAAB3AQCQXwEAUMMAAAcAdwEAkJEBAAB3AQBQwwAAARgAAAAAAAAAC+QSYAlgCUsACgBUA5ABkAGQAZABkAGQAZABAAAAAAACBDEHpQClAKUALAEAAFkAaQBKAEoAXwBzAHMAZABAAJCSl2CWAJBVAAAAAAAAAAAAAAAAAAAAAAACAtQwAAACEGDqAAACEA==</data>
+				<data>pwIIAQBcAO8GAAAOLAAAGwBIAAAAgKkDAPBJAgDO/w8AAAAAAAAAAAAAAAAAAAIBXABAAjcClACPAbQAHgF6AIwArQEAAAAAYwIAAJAAmQJeATQBiAFoNgIAcQICAgAAAAAAAAgAAAAAAAAABQAHAAMABQAAAAAAAAABCCADNANSA4QDtgPoAxoETAQBAeIEAQGEAwAGYOoAAABAGQEAAdxKAQAC3EoBAALcSgEAAtxKAQACAQjQTAEAAACAAAAAAAAAHIMBAAEAAAAAAAAAAPCaAQABAAAAAAAAAAB4rgEAAgAAAAAAAAAAAMIBAAIAAAAAAAAAAADCAQACAAAAAAEAAAAAwgEAAgAAAAABAAAAAMIBAAIAAAAAAQAAAAAEYOoAAABAGQEAANxKAQAA3EoBAAAACChuAAAALMkAAAD4CwEAAYA4AQACkF8BAAKQXwEAApBfAQACkF8BAAIACGw5AAAAJF4AAAD8hQAAAKy8AAAAYOoAAAHo/QAAAuj9AAACcBEBAAIAAWg8AQAAAQQ8QQAAAAAAMHUAAAAAAFDDAAAAAABwEQEAAAAAAQgAmIUAAEC1AABg6gAAUMMAAACAuwAAYOoAAJQLAQBQwwAAAHj/AABAGQEAtCcBAFDDAAAAtCcBANxKAQDcSgEAUMMAAAC0JwEA3EoBANxKAQBQwwAAALQnAQDcSgEA3EoBAFDDAAAAtCcBANxKAQDcSgEAUMMAAAC0JwEA3EoBANxKAQBQwwAAARgAAAAAAAAAC+QSYAlgCUsACgBUA5ABkAGQAZABkAGQAZABAAAAAAACBDEHpQClAKUALAEAAFkAaQBKAEoAXwBzAHMAZABAAJCSl2CWAJBVAAAAAAAAAAAAAAAAAAAAAAACAtQwAAACEGDqAAACEA==</data>
 				<key>device_type</key>
 				<string>ATY,KamarangParent</string>
 				<key>hda-gfx</key>
@@ -267,6 +246,13 @@
 				<data>cGNpMTQ0ZCxhODA4</data>
 				<key>device_type</key>
 				<string>Unassigned class</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x17,0x0)</key>
+			<dict>
+				<key>built-in</key>
+				<data>AA==</data>
+				<key>force-hot-plug</key>
+				<data>AQAAAA==</data>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -302,7 +288,7 @@
 				<key>Comment</key>
 				<string>V0.0.1</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/DisableTurboBoost</string>
 				<key>MaxKernel</key>
@@ -320,7 +306,7 @@
 				<key>Comment</key>
 				<string>V1.3.0 | CPU power management</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/CPUFriend</string>
 				<key>MaxKernel</key>
@@ -338,7 +324,7 @@
 				<key>Comment</key>
 				<string>V1.0.1 | CPU power management data</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string></string>
 				<key>MaxKernel</key>
@@ -476,6 +462,168 @@
 			</dict>
 			<dict>
 				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>AppleIGB.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/AppleIGB</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>CpuTscSync.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/CpuTscSync</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>SATA-unsupported.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>CtlnaAHCIPort.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/CtlnaAHCIPort</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>HynixDisable.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>IntelMausiEthernet.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/IntelMausiEthernet</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>NVMeFix.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/NVMeFix</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>UTBDefault.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>XHCI-unsupported.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>AppleIntelI210Ethernet.kext</string>
@@ -554,7 +702,7 @@
 				<key>Comment</key>
 				<string>V2.5.0</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/IntelBluetoothFirmware</string>
 				<key>MaxKernel</key>
@@ -572,7 +720,7 @@
 				<key>Comment</key>
 				<string>V2.5.0</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/IntelBTPatcher</string>
 				<key>MaxKernel</key>
@@ -895,6 +1043,36 @@
 				<key>Skip</key>
 				<integer>0</integer>
 			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>Base</key>
+				<string></string>
+				<key>Comment</key>
+				<string></string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data></data>
+				<key>Identifier</key>
+				<string>com.apple.</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>Replace</key>
+				<data></data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
 		</array>
 		<key>Quirks</key>
 		<dict>
@@ -911,7 +1089,7 @@
 			<key>CustomPciSerialDevice</key>
 			<false/>
 			<key>DisableIoMapper</key>
-			<false/>
+			<true/>
 			<key>DisableIoMapperMapping</key>
 			<true/>
 			<key>DisableLinkeditJettison</key>
@@ -992,7 +1170,7 @@
 			<key>TakeoffDelay</key>
 			<integer>0</integer>
 			<key>Timeout</key>
-			<integer>5</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Debug</key>
 		<dict>
@@ -1328,7 +1506,7 @@
 			<key>KeyInitialDelay</key>
 			<integer>50</integer>
 			<key>KeySubsequentDelay</key>
-			<integer>5</integer>
+			<integer>6</integer>
 			<key>PointerDwellClickTimeout</key>
 			<integer>0</integer>
 			<key>PointerDwellDoubleClickTimeout</key>
